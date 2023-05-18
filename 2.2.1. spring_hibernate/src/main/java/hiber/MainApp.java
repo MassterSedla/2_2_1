@@ -26,8 +26,8 @@ public class MainApp {
       Car car3 = new Car("q3", 3);
       Car car4 = new Car("q4", 4);
 
-      user1.setCar(car2);
-      user2.setCar(car1);
+      user1.setCar(car1);
+      user2.setCar(car2);
       user3.setCar(car3);
       user4.setCar(car4);
 
@@ -36,7 +36,9 @@ public class MainApp {
 //      userService.add(user3);
 //      userService.add(user4);
 
+      User user5 = userService.getUserFromCar(car2);
       List<User> users = userService.listUsers();
+      users.add(user5);
       for (User user : users) {
          System.out.println("Id = " + user.getId());
          System.out.println("First Name = " + user.getFirstName());
@@ -46,7 +48,6 @@ public class MainApp {
          System.out.println();
       }
 
-      System.out.println(userService.getUserFromCar(car2));
 
       context.close();
    }
