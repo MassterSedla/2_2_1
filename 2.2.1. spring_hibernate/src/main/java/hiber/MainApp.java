@@ -31,23 +31,12 @@ public class MainApp {
       user3.setCar(car3);
       user4.setCar(car4);
 
-//      userService.add(user1);
-//      userService.add(user2);
-//      userService.add(user3);
-//      userService.add(user4);
+      userService.add(user1);
+      userService.add(user2);
+      userService.add(user3);
+      userService.add(user4);
 
-      User user5 = userService.getUserFromCar(car2);
-      List<User> users = userService.listUsers();
-      users.add(user5);
-      for (User user : users) {
-         System.out.println("Id = " + user.getId());
-         System.out.println("First Name = " + user.getFirstName());
-         System.out.println("Last Name = " + user.getLastName());
-         System.out.println("Email = " + user.getEmail());
-         System.out.println("Car = " + user.getCar());
-         System.out.println();
-      }
-
+      System.out.println(userService.getUserFromCar(car2));
 
       context.close();
    }
